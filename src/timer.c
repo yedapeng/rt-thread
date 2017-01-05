@@ -63,7 +63,7 @@ static void (*rt_timer_timeout_hook)(struct rt_timer *timer);
  * @addtogroup Hook
  */
 
-/*@{*/
+/**@{*/
 
 /**
  * This function will set a hook function, which will be invoked when timer
@@ -76,7 +76,7 @@ void rt_timer_timeout_sethook(void (*hook)(struct rt_timer *timer))
     rt_timer_timeout_hook = hook;
 }
 
-/*@}*/
+/**@}*/
 #endif
 
 static void _rt_timer_init(rt_timer_t timer,
@@ -164,7 +164,7 @@ void rt_timer_dump(rt_list_t timer_heads[])
  * @addtogroup Clock
  */
 
-/*@{*/
+/**@{*/
 
 /**
  * This function will initialize a timer, normally this function is used to
@@ -293,7 +293,7 @@ RTM_EXPORT(rt_timer_delete);
  */
 rt_err_t rt_timer_start(rt_timer_t timer)
 {
-    int row_lvl;
+    unsigned int row_lvl;
     rt_list_t *timer_list;
     register rt_base_t level;
     rt_list_t *row_head[RT_TIMER_SKIP_LIST_LEVEL];
@@ -710,4 +710,4 @@ void rt_system_timer_thread_init(void)
 #endif
 }
 
-/*@}*/
+/**@}*/
